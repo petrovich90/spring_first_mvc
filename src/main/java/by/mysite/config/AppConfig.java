@@ -14,17 +14,8 @@ public class AppConfig {
     public ViewResolver viewResolver() {
         System.out.println("ViewResolver");
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("/pages/");
+        resolver.setPrefix("/WEB-INF/pages/");
         resolver.setSuffix(".jsp");
-        return resolver;
-    }
-
-    @Bean
-    public ViewResolver viewResolverHtml() {
-        System.out.println("ViewResolver");
-        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("/WEB-INF/html-pages/");
-        resolver.setSuffix(".html");
         return resolver;
     }
 }
